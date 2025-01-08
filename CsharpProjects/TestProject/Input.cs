@@ -1,4 +1,5 @@
 using System.Reflection.Emit;
+using System.Security.AccessControl;
 
 class Input
 {
@@ -14,6 +15,22 @@ class Input
             else
             {
                 Console.WriteLine("Please enter an integer!!!");
+            }
+        }
+    }
+
+    public static string stringValidity()
+    {
+        while(true)
+        {
+            string input = Console.ReadLine();
+            if(string.IsNullOrEmpty(input.ToLower()))
+            {
+                if(input != "sin" || input != "cos" || input != "tan" || input != "sec" || input != "cosec" || input != "cot")
+                {
+                    Console.WriteLine("Please enter valid trigonometric function \"sin,cos,tan,sec,cosec,cot\"!!!");
+
+                }
             }
         }
     }
@@ -55,6 +72,14 @@ class Input
         double operator2 = Input.integerValidity();
 
         return (operator1,operand,operator2);
+    }
+
+    public static double trigonometricInput()
+    {
+        Console.WriteLine("Enter angle:");
+        double angle = double.Parse(Console.ReadLine());
+        double radiant = angle*(Math.PI/180);
+        return(radiant);
     }
     
 }

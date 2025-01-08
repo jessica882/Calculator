@@ -2,9 +2,11 @@
 {
    public static void Main(string[] args)
    {
-        Menu.MainMenu();
-
+        Menu.mainMenu();
+        Console.WriteLine("Enter your choice:");
         OptionChoose.mainMenuOption();
+
+        
 
 
    }
