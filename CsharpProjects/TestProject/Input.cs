@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using System.Reflection.Emit;
 using System.Security.AccessControl;
 
@@ -19,21 +20,6 @@ class Input
         }
     }
 
-    public static string stringValidity()
-    {
-        while(true)
-        {
-            string input = Console.ReadLine();
-            if(string.IsNullOrEmpty(input.ToLower()))
-            {
-                if(input != "sin" || input != "cos" || input != "tan" || input != "sec" || input != "cosec" || input != "cot")
-                {
-                    Console.WriteLine("Please enter valid trigonometric function \"sin,cos,tan,sec,cosec,cot\"!!!");
-
-                }
-            }
-        }
-    }
 
     public static char charValidity()
     {
