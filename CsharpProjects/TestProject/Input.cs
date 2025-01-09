@@ -8,7 +8,7 @@ class Input
     {
         while (true)
         {
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
             if(double.TryParse(input, out double checkedInteger))
             {
                 return checkedInteger;
@@ -26,7 +26,7 @@ class Input
 
         while(true)
         {
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
             if(char.TryParse(input, out char checkedchar))
             {
                 return checkedchar;
@@ -45,13 +45,18 @@ class Input
         double operator1 = Input.integerValidity();
         
         char operand;
-        do
+        while(true)
         {
-            Console.WriteLine("Choose the operand: /, *, -, +");
-            operand = Input.charValidity();
-        }while(operand != '/' || operand != '*' || operand != '+' || operand != '-');
-        {
-            Console.WriteLine("Please input valid option!!!");
+            Console.WriteLine("Choose an operand: +, -, *, /");
+            operand = charValidity();
+            if (operand == '/' || operand == '*' || operand == '+' || operand == '-')
+            {
+                break; 
+            }
+            else
+            {
+                Console.WriteLine("Please input a valid option!!!");
+            }
         }
 
         Console.WriteLine("Enter the second number:");
@@ -60,12 +65,42 @@ class Input
         return (operator1,operand,operator2);
     }
 
+    public static string arithmeticExpressionInput()
+    {
+        while(true)
+        {
+            Console.WriteLine("Enter the expression:");
+            string? expression = Console.ReadLine();
+            if(expression == null)
+            {
+                Console.WriteLine("Please enter an expression!!!");
+            }
+            else
+            {
+                return expression;
+            }
+
+        }
+    }
+
     public static double trigonometricInput()
     {
-        Console.WriteLine("Enter angle:");
-        double angle = double.Parse(Console.ReadLine());
-        double radiant = angle*(Math.PI/180);
-        return(radiant);
+        while(true)
+        {
+            Console.WriteLine("Enter angle:");
+            string? input = Console.ReadLine();
+
+            if(double.TryParse(input, out double angle))
+            {
+                double radiant = angle*(Math.PI/180);
+                return(radiant);
+            }
+            else
+            {
+                Console.WriteLine("Enter a valid angle!!!");
+            }
+
+        }
     }
     
 }
