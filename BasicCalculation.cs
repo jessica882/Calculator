@@ -22,58 +22,55 @@ class BasicCalculation
 
     public static void division(double operator1, double operator2)
     {
-        while (true)
+        try
         {
-            if (operator2 == 0)
-            {
-                Console.WriteLine("Divident cannot be zero!!!");
-                Input.basicInput();
-            }
-            
-            else
-            {
-                 Console.WriteLine($"Division: {operator1 / operator2}");
-                 break;
-            }
+            Console.WriteLine($"Division: {operator1/operator2}");
+        }catch(DivideByZeroException)
+        {
+            Console.Clear();
+            Console.WriteLine("Divident cannot be zero!!!");
         }
     }
 
     public static void calculation()
     {
-        var input = Input.basicInput();
-        char operand = input.operandValue;
-        double operand1 = input.operatorValue1;
-        double operand2 = input.operatorValue2;
-        
-        switch(operand)
+        while(true)
         {
-            case '-':
-            subtraction(operand1, operand2);
-            break;
-
-
-            case '+':
-            addition(operand1, operand2);
-            break;
-
-
-            case '*':
-            multiplication(operand1, operand2);
-            break;
-
-
-
-            case '/':
-            division(operand1, operand2);
-            break;
-
-
+            var input = Input.basicInput();
+            char operand = input.operandValue;
+            double operand1 = input.operatorValue1;
+            double operand2 = input.operatorValue2;
             
-            default:
-            Console.WriteLine("Please Choose from option.");
-            return;
-        }
+            switch(operand)
+            {
+                case '-':
+                subtraction(operand1, operand2);
+                break;
 
+
+                case '+':
+                addition(operand1, operand2);
+                break;
+
+
+                case '*':
+                multiplication(operand1, operand2);
+                break;
+
+
+
+                case '/':
+                division(operand1, operand2);
+                break;
+
+
+                
+                default:
+                Console.WriteLine("Please Choose from option.");
+                return;
+            }
+
+        }
     }
 
 

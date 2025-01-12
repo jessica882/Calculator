@@ -14,9 +14,18 @@ class Input
             {
                 return checkedInteger;
             }
-            else
+            else if(char.TryParse(input, out char main))
             {
-                Console.WriteLine("Please enter an integer!!!");
+                if(main == 'm')
+                {
+                    Console.Clear();
+                    Menu.mainMenu();
+                    MainOptionChoose.mainMenuOption();
+                }
+                else
+                {
+                    Console.WriteLine("Please enter an integer!!!");
+                }
             }
         }
     }
