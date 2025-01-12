@@ -1,14 +1,12 @@
-namespace menu
-{
-class Menu
+abstract class Menu
 {
     public static void mainMenu()
     {
         Console.WriteLine("---------Calculator---------");
         Console.WriteLine("1. Basic Operation");
-        Console.WriteLine("2. Arithmetic Expression");
-        Console.WriteLine("3. Scientific Operation");
-        Console.WriteLine("4. Number System Conversion");
+        Console.WriteLine("1. Arithmetic Expression");
+        Console.WriteLine("1. Scientific Operation");
+        Console.WriteLine("1. Number System Conversion");
         Console.WriteLine("5. Exit");
     }
 
@@ -21,7 +19,5 @@ class Menu
         Console.WriteLine("5. sec");
         Console.WriteLine("6. cot");
     }
-
-}
 
 }

@@ -1,7 +1,6 @@
 using System.Linq.Expressions;
 using System.Reflection.Emit;
 using System.Security.AccessControl;
-using System.Security.Cryptography.X509Certificates;
 
 class Input
 {
@@ -14,18 +13,9 @@ class Input
             {
                 return checkedInteger;
             }
-            else if(char.TryParse(input, out char main))
+            else
             {
-                if(main == 'm')
-                {
-                    Console.Clear();
-                    Menu.mainMenu();
-                    MainOptionChoose.mainMenuOption();
-                }
-                else
-                {
-                    Console.WriteLine("Please enter an integer!!!");
-                }
+                Console.WriteLine("Please enter an integer!!!");
             }
         }
     }
@@ -49,17 +39,10 @@ class Input
         }
     }
 
-    public class BasicInputResult
-    {
-        public double operatorValue1;
-        public double operatorValue2;
-        public char operandValue;
-    }
-
-    public static BasicInputResult basicInput()
+    public static (double,char,double) basicInput()
     {
         Console.WriteLine("Enter the first number:");
-        double operator1 =integerValidity();
+        double operator1 = Input.integerValidity();
         
         char operand;
         while(true)
@@ -79,13 +62,7 @@ class Input
         Console.WriteLine("Enter the second number:");
         double operator2 = Input.integerValidity();
 
-        return new BasicInputResult
-        {
-            operatorValue1 = operator1,
-            operatorValue2 = operator2,
-            operandValue = operand
-        };
-
+        return (operator1,operand,operator2);
     }
 
     public static string arithmeticExpressionInput()
