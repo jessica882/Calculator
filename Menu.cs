@@ -1,5 +1,4 @@
-namespace menu
-{
+
 class Menu
 {
     public static void mainMenu()
@@ -21,7 +20,5 @@ class Menu
         Console.WriteLine("5. sec");
         Console.WriteLine("6. cot");
     }
-
-}
 
 }

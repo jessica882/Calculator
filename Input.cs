@@ -59,7 +59,7 @@ class Input
     public static BasicInputResult basicInput()
     {
         Console.WriteLine("Enter the first number:");
-        double operator1 =integerValidity();
+        double operator1 =Input.integerValidity();
         
         char operand;
         while(true)
