@@ -3,7 +3,7 @@ class ScientificCalculation
 
     public static void calculation()
     {
-        int choice = int.Parse(Console.ReadLine());
+        int choice = Convert.ToInt32(Console.ReadLine());
         double radiant = Input.trigonometricInput();
         double result1 = 0;
         string result2 = "infinite";
@@ -23,7 +23,7 @@ class ScientificCalculation
             break;
 
             case 4:
-            if((Math.Sin(radiant)) == 0)
+            if(Math.Sin(radiant) == 0)
             {
                 Console.WriteLine(result2);
             }
@@ -34,7 +34,7 @@ class ScientificCalculation
             break;
 
             case 5:
-            if((Math.Cos(radiant)) == 0)
+            if(Math.Cos(radiant) == 0)
             {
                 Console.WriteLine(result2);
             }
@@ -45,7 +45,7 @@ class ScientificCalculation
             break;
 
             case 6:
-            if((Math.Tan(radiant)) == 0)
+            if(Math.Tan(radiant) == 0)
             {
                 Console.WriteLine(result2);
             }

@@ -26,6 +26,10 @@ class MainOptionChoose
                 ScientificCalculation.calculation();
                 break;
 
+                case 4:
+                Menu.numberSystemMenu();
+                
+
                 case 5:
                 return;
             }

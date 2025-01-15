@@ -125,5 +125,40 @@ class Input
 
         }
     }
+
+
+    public static int binaryInput()
+    {
+        while(true)
+        {
+            Console.WriteLine("Enter the binary number:");
+            string? input = Console.ReadLine();
+
+            if(input is not null)
+            {
+                foreach(char digit in input)
+                {
+                    if(digit!='0' && digit!='1')
+                    {
+                        Console.WriteLine("Not a binary Number!!!");
+                    }
+                    else
+                    {
+                        return Convert.ToInt32(input);
+                    }
+                }
+            }
+        }
+    }
+
+
+    public static int decimalInput()
+    {
+        while(true)
+        {
+            Console.WriteLine("Enter the decimal number:");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+    }
     
 }

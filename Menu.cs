@@ -13,12 +13,21 @@ class Menu
 
     public static void trigonometricMenu()
     {
+        Console.Clear();
         Console.WriteLine("1. sin");
         Console.WriteLine("2. cos");
         Console.WriteLine("3. tan");
         Console.WriteLine("4. cosec");
         Console.WriteLine("5. sec");
         Console.WriteLine("6. cot");
+    }
+
+    public static void numberSystemMenu()
+    {
+        Console.Clear();
+        Console.WriteLine("1. Binary to decimal");
+        Console.WriteLine("2. Decimal to binary");
+
     }
 
 }
