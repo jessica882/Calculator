@@ -38,7 +38,7 @@ class NumberSystem
         Console.WriteLine($"{decimalNumber} to binary is {binaryValue}");
     }
 
-    public static void choice()
+    public static void conversion()
     {
         int choice = Convert.ToInt32(Console.ReadLine());
         switch(choice)

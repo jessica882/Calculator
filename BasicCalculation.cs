@@ -69,7 +69,14 @@ class BasicCalculation
                 Console.WriteLine("Please Choose from option.");
                 return;
             }
-
+            Console.WriteLine("Press Any key to continue!!!");
+            Console.WriteLine("Press m for main menu!!!");
+            string? continueInput = Console.ReadLine();
+            if(continueInput.ToLower() == 'm')
+            {
+                Menu.mainMenu();
+                MainOptionChoose.mainMenuOption();
+            }
         }
     }
 

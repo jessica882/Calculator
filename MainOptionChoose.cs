@@ -28,10 +28,15 @@ class MainOptionChoose
 
                 case 4:
                 Menu.numberSystemMenu();
+                NumberSystem.conversion();
+                break;
                 
-
                 case 5:
                 return;
+
+                default:
+                Console.WriteLine("Enter the valid choice!!!");
+                break;
             }
 
         }
